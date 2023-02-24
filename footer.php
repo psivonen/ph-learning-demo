@@ -15,11 +15,16 @@
         <div class="footer-item">
             <h4>Sign up for the newsletter</h4>
             <p>You'll be the first to know about upcoming courses and workshops!</p>
-            <div class="input-group">
+            <form class="newsletter" id="newsletter">
                 <input type="email" class="form-control" placeholder="Enter your email address...">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Subscribe</button>
-            </div>
-
+                <button class="btn btn-outline-secondary" type="button" id="subscribe">Subscribe</button>
+            </form>
+            <ul class="socials">
+                <li><a class="social-icon" href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a class="social-icon" href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a class="social-icon" href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a class="social-icon" href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+            </ul>
         </div>
     </div>
     <hr>
@@ -33,3 +38,5 @@
         </div>
     </div>
 </div>
+
+</body>
