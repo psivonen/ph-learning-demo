@@ -26,7 +26,7 @@
 
     <div class="container-md">
         <div class="column">
-            <h3>Welcome</h3>
+            <h2>Welcome</h2>
             <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tincidunt ex sit amet turpis posuere scelerisque.
                 Curabitur nec pharetra dolor. Integer vitae ultrices ante. Phasellus sit amet enim ut urna mollis malesuada.
                 Proin porttitor aliquet quam, in laoreet ligula dictum eget. Proin tempor lorem sed leo faucibus rhoncus.
@@ -48,7 +48,7 @@
     </div>
 
     <div class="container">
-        <h3>Latest courses and workshops</h3>
+        <h2>Most popular courses & workshops</h2>
         <div class="container-sm">
             <div class="gallery">
                 <div class="gallery-item">
@@ -102,10 +102,11 @@
             </div>
         </div>
     </div>
+</div>
 
-    <div class="container">
-    <h3>What other people are saying</h3>
+<div class="testimonials">
         <div class="row">
+        <h3>What other people are saying</h3>
             <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner" role="listbox">
                     <div class="carousel-item active">
@@ -172,8 +173,6 @@
             </div>
         </div>
     </div>
-
-</div>
 
 <?php include('footer.php'); ?>
 

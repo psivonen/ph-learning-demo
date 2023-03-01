@@ -16,7 +16,7 @@
             <h4>Sign up for the newsletter</h4>
             <p>You'll be the first to know about upcoming courses and workshops!</p>
             <form class="newsletter" id="newsletter">
-                <input type="email" class="form-control" placeholder="Enter your email address...">
+                <input type="email" class="form-control" placeholder="Email address">
                 <button class="btn btn-outline-secondary" type="button" id="subscribe">Subscribe</button>
             </form>
             <ul class="socials">

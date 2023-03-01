@@ -4,11 +4,10 @@ const navToggle = () => {
     else nav.className = "nav-links";
 }
 
-var nav = document.querySelector('.navigation'); // Identify target
+var nav = document.querySelector('#main-nav'); // Identify target
 
 window.addEventListener('scroll', function(event) { // To listen for event
     event.preventDefault();
-
     if (window.scrollY >= 80) {
         nav.style.backgroundColor = '#0F0C29'; // or default color
     } else {
