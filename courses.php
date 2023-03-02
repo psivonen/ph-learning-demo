@@ -7,14 +7,14 @@ include('header2.php');
 ?>
 
 <div class="course-hero">
-        <div class="course-hero-content">
-            <h1>Find your course or workshop and improve your photography skills</h1>
-            <p class="lead">Nam tempus tellus non nibh dictum facilisis. 
-                Nam urna massa, posuere eu mauris sed, condimentum imperdiet turpis. 
-                Duis mollis libero sed dapibus efficitur. 
-                Etiam maximus, nulla quis euismod pharetra, nulla purus condimentum lacus, eu sagittis sem lorem non erat. </p>
-        </div>
+    <div class="course-hero-content">
+        <h1>Find your course or workshop and improve your photography skills</h1>
+        <p class="lead">Nam tempus tellus non nibh dictum facilisis. 
+            Nam urna massa, posuere eu mauris sed, condimentum imperdiet turpis. 
+            Duis mollis libero sed dapibus efficitur. 
+            Etiam maximus, nulla quis euismod pharetra, nulla purus condimentum lacus, eu sagittis sem lorem non erat. </p>
     </div>
+</div>
 
 <div class="container-lg">
     <div class="container-md">
@@ -39,12 +39,13 @@ include('header2.php');
         <h2>Upcoming courses and workshops</h2>
         <div class="container-sm">
             <div class="gallery">
-                <div class="gallery-item">
-                    <p class="uppercase">Beginner / Price 120€</p>
+            <div class="gallery-item">
+                    <p class="uppercase">Beginner, Intermediate
+                        <br>Price 299€</p>
                     <div>
-                        <h4>Course / workshop name</h4>
+                        <h4>Basics of studio photography</h4>
                         <p>Pellentesque accumsan tincidunt ipsum, et consectetur elit egestas vel. Quisque in dapibus mauris, non pellentesque lorem. </p>
-                        <button class="btn btn-outline-light">Read more</button>
+                        <button class="btn btn-outline-light" onclick="window.location.href='course-page.php';">Read more</button>
                     </div>
                 </div>
                 <div class="gallery-item">

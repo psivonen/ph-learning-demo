@@ -13,7 +13,7 @@
                 nulla purus condimentum lacus, eu sagittis sem lorem non erat. </p>
             <br>
             <button class="btn btn-outline-primary">Book a Session</button>
-            <button class="btn btn-outline-light">Start learning</button>
+            <button class="btn btn-outline-light" onclick="btnLink('courses.php')">Start learning</button>
         </div>
         <div class="col">
             <img src="Images/portrait.png" alt="grayscale portrait of a woman">
@@ -52,11 +52,12 @@
         <div class="container-sm">
             <div class="gallery">
                 <div class="gallery-item">
-                    <p class="uppercase">Beginner / Price 120€</p>
+                    <p class="uppercase">Beginner, Intermediate
+                        <br>Price 299€</p>
                     <div>
-                        <h4>Course / workshop name</h4>
+                        <h4>Basics of studio photography</h4>
                         <p>Pellentesque accumsan tincidunt ipsum, et consectetur elit egestas vel. Quisque in dapibus mauris, non pellentesque lorem. </p>
-                        <button class="btn btn-outline-light">Read more</button>
+                        <button class="btn btn-outline-light" onclick="btnLink('course-page.php')">Read more</button>
                     </div>
                 </div>
                 <div class="gallery-item">
