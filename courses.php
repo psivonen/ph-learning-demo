@@ -3,7 +3,7 @@
 
 <?php 
 $title = "Courses & Workshops";
-include('header2.php'); 
+include('header.php'); 
 ?>
 
 <div class="course-hero">

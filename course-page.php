@@ -67,7 +67,7 @@ include('header2.php');
     <div class="container-md">
         <div class="column">
             <p style="font-weight: 700; font-size: 20px;">Price: 299€</p>
-            <button class="btn btn-outline-dark">Register now</button>
+            <button class="btn btn-outline-dark" onclick="window.location.href='register.php';">Register now</button>
         </div>
     </div>
 </div>

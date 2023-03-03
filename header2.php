@@ -29,8 +29,8 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
             <a href="index.php" class="<?= ($activePage == 'index') ? 'active':'nav-link'; ?>">Home</a>
             <a href="" class="<?= ($activePage == 'photography') ? 'active':'nav-link'; ?>">Photography</a>
             <a href="courses.php" class="<?= ($activePage == 'courses') ? 'active':'nav-link'; ?>">Courses & Workshops</a>
-            <a href="" class="<?= ($activePage == 'portfolio') ? 'active':'nav-link'; ?>">Portfolio</a>
+            <a href="portfolio.php" class="<?= ($activePage == 'portfolio') ? 'active':'nav-link'; ?>">Portfolio</a>
             <a href="" class="<?= ($activePage == 'about') ? 'active':'nav-link'; ?>">About</a>
-            <a href="" class="<?= ($activePage == 'contact') ? 'active':'nav-link'; ?>">Contact</a>
+            <a href="contact.php" class="<?= ($activePage == 'contact') ? 'active':'nav-link'; ?>">Contact</a>
         </div>
     </div>
