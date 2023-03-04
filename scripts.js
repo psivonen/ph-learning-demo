@@ -50,6 +50,43 @@ buttons.forEach((button) => {
   };
 });*/
 
-const btnLink = (url) => {
+function btnLink(url) {
     window.location.href = url;
+};
+
+// Portfolio Lightbox
+function openLightbox() {
+  document.querySelector("#lightbox").style.display = "block";
+}
+
+function closeLightbox() {
+  document.querySelector("#lightbox").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let slides = document.querySelectorAll(".slide");
+  let dots = document.querySelectorAll(".demo");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
 }
