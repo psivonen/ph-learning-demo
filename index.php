@@ -12,8 +12,10 @@
                 Duis mollis libero sed dapibus efficitur. Etiam maximus, nulla quis euismod pharetra,
                 nulla purus condimentum lacus, eu sagittis sem lorem non erat. </p>
             <br>
-            <button class="btn btn-outline-primary">Book a Session</button>
-            <button class="btn btn-outline-light" onclick="btnLink('courses.php')">Start learning</button>
+            <div class="d-grid gap-2 d-md-block">
+                <button class="btn btn-outline-primary">Book a Session</button>
+                <button class="btn btn-outline-light" onclick="btnLink('courses.php')">Start learning</button>
+            </div>
         </div>
         <div class="col">
             <img src="Images/portrait.png" alt="grayscale portrait of a woman">

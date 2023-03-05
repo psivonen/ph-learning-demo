@@ -59,72 +59,59 @@
 
 <!-- The Modal/Lightbox -->
 <div id="lightbox" class="modal">
-    <span class="close cursor" onclick="closeLightbox()">&times;</span>
+    <span class="close cursor" onclick="closeLightbox()"><i class="bi bi-x-lg"></i></span>
     <div class="modal-content">
-
-        <div class="slide">
-            <div class="numbertext">1 / 12</div>
+        <div class="slides">
             <img src="Images/northern-lights.jpg" class="slide-img">
         </div>
 
-        <div class="slide">
-            <div class="numbertext">2 / 12</div>
+        <div class="slides">
             <img src="Images/colorful-portrait.jpg" class="slide-img">
         </div>
 
-        <div class="slide">
-            <div class="numbertext">3 / 12</div>
+        <div class="slides">
             <img src="Images/sea.jpg" class="slide-img">
         </div>
 
-        <div class="slide">
-            <div class="numbertext">4 / 12</div>
+        <div class="slides">
             <img src="Images/portrait-pink.jpg" class="slide-img">
         </div>
 
-        <div class="slide">
-            <div class="numbertext">5 / 12</div>
+        <div class="slides">
             <img src="Images/portrait-3.jpg" class="slide-img">
         </div>
 
-        <div class="slide">
-            <div class="numbertext">6 / 12</div>
+        <div class="slides">
             <img src="Images/white-dog.jpg" class="slide-img">
         </div>
 
-        <div class="slide">
-            <div class="numbertext">7 / 12</div>
+        <div class="slides">
             <img src="Images/pink-flowers.jpg" class="slide-img">
         </div>
 
-        <div class="slide">
-            <div class="numbertext">8 / 12</div>
+        <div class="slides">
             <img src="Images/brown-dog.jpg" class="slide-img">
         </div>
 
-        <div class="slide">
-            <div class="numbertext">10 / 12</div>
+        <div class="slides">
             <img src="Images/colorful-portrait-2.jpg" class="slide-img">
         </div>
 
-        <div class="slide">
-            <div class="numbertext">10 / 12</div>
+        <div class="slides">
             <img src="Images/bw-portrait.jpg" class="slide-img">
         </div>
 
-        <div class="slide">
-            <div class="numbertext">11 / 12</div>
+        <div class="slides">
             <img src="Images/editorial.jpg" class="slide-img">
         </div>
 
-        <div class="slide">
-            <div class="numbertext">12 / 12</div>
+        <div class="slides">
             <img src="Images/bw-portrait-2.jpg" class="slide-img">
         </div>
 
         <!-- Next/previous controls -->
-        <a class="prev" onclick="plusSlides(-1)"><i class="fa-solid fa-arrow-left"></i></a>
-        <a class="next" onclick="plusSlides(1)"><i class="fa-solid fa-arrow-right"></i></a>
+        <a class="prev-img" onclick="plusSlides(-1)"><i class="fa-solid fa-arrow-left"></i></a>
+        <a class="next-img" onclick="plusSlides(1)"><i class="fa-solid fa-arrow-right"></i></a>
 
     </div>
 </div>
