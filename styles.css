@@ -300,6 +300,14 @@ h5 {
   gap: 40px;
 }
 
+.container-register {
+  margin-top: 80px;
+}
+
+.container-register h2 {
+  padding-bottom: 30px;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -866,6 +874,13 @@ img.hover-shadow {
   .image-grid {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  .container-register {
+    width: 50%;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
   }
   
 }

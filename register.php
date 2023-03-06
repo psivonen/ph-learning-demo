@@ -3,36 +3,57 @@
 
 <?php
 include('header2.php');
+include('form_validation.php');
 ?>
 
-<div class="contact-column">
-    <div class="item-right">
-        <form class="row g-3">
+<div class="container-lg">
+    <div class="container-register">
+        <h2>Register</h2>
+        <form class="row g-3 needs-validation" method="post" novalidate>
+            <div class="col-12">
+                <label for="course_id" class="form-label">Select course/workshop</label>
+                <select required id="course_id" name="course_id" class="form-select <?php is_invalid('course_id'); ?>"><?php courses(); ?></select>
+                <div class="invalid-feedback">Select a course/workshop.</div>
+            </div>
             <div class="col-md-6">
-                <label for="inputfName" class="form-label">First name</label>
-                <input type="text" class="form-control" id="inputfName" placeholder="First name">
+                <label for="participant_fname" class="form-label">First name</label>
+                <input id="participant_fname" name="participant_fname" pattern="<?= trim($patterns['participant_fname'], "/"); ?>" type="text" class="form-control <?php is_invalid('participant_fname'); ?>" placeholder="First name" value="<?= showField('participant_fname'); ?>" autofocus required>
+                <div class="invalid-feedback">First name is required.</div>
             </div>
             <div class="col-md-6">
-                <label for="inputlName" class="form-label">Last name</label>
-                <input type="text" class="form-control" id="inputlName" placeholder="Last name">
+                <label for="participant_lname" class="form-label">Last name</label>
+                <input id="participant_lname" name="participant_lname" pattern="<?= trim($patterns['participant_lname'], "/"); ?>" type="text" class="form-control <?php is_invalid('participant_lname'); ?>" placeholder="Last name" value="<?= showField('participant_lname'); ?>" required>
+                <div class="invalid-feedback">Last name is required.</div>
             </div>
             <div class="col-12">
-                <label for="inputEmail" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="inputEmail" placeholder="you@company.com">
+                <label for="participant_email" class="form-label">Email address</label>
+                <input id="participant_email" name="participant_email" pattern="<?= trim($patterns['participant_email'], "/"); ?>" type="email" class="form-control <?php is_invalid('participant_email'); ?>" placeholder="you@company.com" value="<?= showField('participant_email'); ?>" required>
+                <div class="invalid-feedback"><?php echo error('participant_email'); ?></div>
             </div>
             <div class="col-12">
-                <label for="inputMobile" class="form-label">Mobilenumber</label>
-                <input type="number" class="form-control" id="inputMobile" placeholder="+358XX1234567">
+                <label for="participant_phone" class="form-label">Mobilenumber</label>
+                <input id="participant_phone" name="participant_phone" pattern="<?= trim($patterns['participant_phone'], "/"); ?>" type="text" class="form-control <?php is_invalid('participant_phone'); ?>" placeholder="+358XX1234567" value="<?= showField('participant_phone'); ?>" required>
+                <div class="invalid-feedback">Mobilenumber is required.</div>
             </div>
             <div class="col-12">
-                <label for="inputSubject" class="form-label">Select course</label>
-                <select id="inputSubject" class="form-select">
-                    <option selected>Choose...</option>
-                    <option>...</option>
-                </select>
+                <button type="submit" class="btn btn-primary" name="register">Register</button>
             </div>
             <div class="col-12">
-                <button type="submit" class="btn btn-primary">Register</button>
+                <?php
+                if (isset($_POST['register'])) {
+                    if ($errors) {
+                        echo "<div class=\"alert alert-danger\" role=\"alert\">";
+                        echo "<i class=\"bi bi-exclamation-triangle-fill\"></i> Errors:<br>";
+                        foreach ($errors as $field => $value) echo "$field<br>";
+                        echo "</div>";
+                    } else {
+                        echo "<div class=\"alert alert-success\" role=\"alert\">";
+                        echo "Registration was succesful. Confirmation message has been sent to your email.";
+                        //echo "<i class=\"bi bi-check-circle-fill\"></i> Added: $added new participant<br></div>";
+                    }
+                    echo "</div></div>";
+                }
+                ?>
             </div>
         </form>
     </div>
