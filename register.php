@@ -2,8 +2,8 @@
 <html lang="en">
 
 <?php
-include('header2.php');
 include('form_validation.php');
+include('header2.php');
 ?>
 
 <div class="container-lg">
@@ -12,12 +12,12 @@ include('form_validation.php');
         <form class="row g-3 needs-validation" method="post" novalidate>
             <div class="col-12">
                 <label for="course_id" class="form-label">Select course/workshop</label>
-                <select required id="course_id" name="course_id" class="form-select <?php is_invalid('course_id'); ?>"><?php courses(); ?></select>
+                <select autofocus required id="course_id" name="course_id" class="form-select <?php is_invalid('course_id'); ?>"><?php courses(); ?></select>
                 <div class="invalid-feedback">Select a course/workshop.</div>
             </div>
             <div class="col-md-6">
                 <label for="participant_fname" class="form-label">First name</label>
-                <input id="participant_fname" name="participant_fname" pattern="<?= trim($patterns['participant_fname'], "/"); ?>" type="text" class="form-control <?php is_invalid('participant_fname'); ?>" placeholder="First name" value="<?= showField('participant_fname'); ?>" autofocus required>
+                <input id="participant_fname" name="participant_fname" pattern="<?= trim($patterns['participant_fname'], "/"); ?>" type="text" class="form-control <?php is_invalid('participant_fname'); ?>" placeholder="First name" value="<?= showField('participant_fname'); ?>" required>
                 <div class="invalid-feedback">First name is required.</div>
             </div>
             <div class="col-md-6">
@@ -48,8 +48,10 @@ include('form_validation.php');
                         echo "</div>";
                     } else {
                         echo "<div class=\"alert alert-success\" role=\"alert\">";
-                        echo "Registration was succesful. Confirmation message has been sent to your email.";
-                        //echo "<i class=\"bi bi-check-circle-fill\"></i> Added: $added new participant<br></div>";
+                        if ($mailSent)
+                            echo "Registration was succesful. Confirmation message has been sent to your email.";
+                        else
+                            echo "<i class=\"bi bi-check-circle-fill\"></i> Added: $added new participant<br></div>";
                     }
                     echo "</div></div>";
                 }

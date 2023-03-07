@@ -5,6 +5,38 @@ const navToggle = () => {
   } else nav.className = "nav-links";
 };
 
+const remove_is_invalid = (event) => {
+  let element = event.target;
+  if (element.classList.contains("is-invalid")) {
+    element.classList.remove("is-invalid");
+    element.removeEventListener("input", remove_is_invalid);
+  }
+};
+
+(() => {
+  "use strict";
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  document
+    .querySelectorAll(".is-invalid")
+    .forEach((element) => element.addEventListener("input", remove_is_invalid));
+
+  const forms = document.querySelectorAll(".needs-validation");
+  // Loop over them and prevent submission
+  Array.from(forms).forEach((form) => {
+    form.addEventListener(
+      "submit",
+      (event) => {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add("was-validated");
+      },
+      false
+    );
+  });
+})();
+
 let nav = document.querySelector("#main-nav");
 
 window.addEventListener("scroll", function (event) {
@@ -39,8 +71,8 @@ items.forEach((el) => {
 
 // Redirect to a page when clicking a button
 function btnLink(url) {
-    window.location.href = url;
-};
+  window.location.href = url;
+}
 
 // Portfolio Lightbox
 function openLightbox() {
@@ -56,21 +88,24 @@ showSlides(slideIndex);
 
 // Next/previous controls
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  showSlides((slideIndex += n));
 }
 
 // Thumbnail image controls
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+  showSlides((slideIndex = n));
 }
 
 function showSlides(n) {
   let slides = document.querySelectorAll(".slides");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  slides[slideIndex-1].style.display = "block";
+  slides[slideIndex - 1].style.display = "block";
 }
-
