@@ -1,7 +1,7 @@
 <?php
 
 $server = $_SERVER['HTTP_HOST'];
-$service = "php/ph-learning";
+$service = "projektit/ph-learning";
 $result = false;
 $errors = [];
 $fields = ['course_id', 'participant_fname', 'participant_lname', 'participant_email', 'participant_phone'];
@@ -110,6 +110,7 @@ if (isset($_POST['register'])) {
     }
 }
 
+// Delete user from course
 // Check if the form has been submitted
 if (isset($_POST['cancel'])) {
     foreach ($fields as $field) {
@@ -125,23 +126,19 @@ if (isset($_POST['cancel'])) {
         elseif ($error = validate($field, $$field)) $errors[$field] = $error;
     }
     // Check if the participant is registered for the course
-    $check_query = "SELECT * FROM participants WHERE course_id = '$course_id' AND participant_email = '$participant_email'";
+    $check_query = "SELECT 1 FROM participants WHERE course_id = '$course_id' AND participant_email = '$participant_email'";
     $check_result = $connect->query($check_query);
     $num_rows = $check_result->num_rows;
 
     if ($num_rows > 0) {
-        // Perform the cancellation
+        // Delete participant from the course
         $query = "DELETE FROM participants WHERE course_id = '$course_id' AND participant_email = '$participant_email'";
         $result = $connect->query($query);
         $deleted = $connect->affected_rows;
 
-        // Show a success message or error message
         if ($deleted > 0) {
-            echo "<p>You have successfully cancelled your participation in the course.</p>";
-        } else {
-            echo "<p>Error: Your participation could not be cancelled at this time. Please try again later.</p>";
-        }
-    } else {
-        echo "<p>Error: You are not registered for this course.</p>";
+            $update_query = "UPDATE courses SET num_participants = num_participants - 1 WHERE course_id = '$course_id'";
+            $update_result = $connect->query($update_query);
+        } 
     }
 }

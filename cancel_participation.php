@@ -24,6 +24,21 @@ include('header2.php');
             <div class="col-12">
                 <button type="submit" class="btn btn-primary" name="cancel">Cancel</button>
             </div>
+            <div class="col-12">
+                <?php
+                if (isset($_POST['cancel'])) {
+                    if ($result) {
+                        echo "<div class=\"alert alert-success\" role=\"alert\">";
+                        echo "You have been succesfully deleted form the course.";
+                        echo "</div></div>";
+                    } else {
+                        echo "<div class=\"alert alert-danger\" role=\"alert\">";
+                        echo "You are not registered to this course.";
+                        echo "</div>";
+                    }
+                }
+                ?>
+            </div>
         </form>
     </div>
 </div>
