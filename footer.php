@@ -1,7 +1,7 @@
 <div class="footer" id="footer">
     <div class="footer-content">
         <div class="footer-item">
-            <h4>Company.</h4>
+            <h4>Company</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
             Etiam tincidunt ex sit amet turpis posuere scelerisque. 
             Curabitur nec pharetra dolor. Integer vitae ultrices ante. 

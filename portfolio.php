@@ -11,7 +11,6 @@
             Duis mollis libero sed dapibus efficitur.
             Etiam maximus, nulla quis euismod pharetra,
             nulla purus condimentum lacus, eu sagittis sem lorem non erat. </p>
-        <button class="btn btn-outline-primary">Book a Session</button>
     </div>
 </div>
 

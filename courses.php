@@ -51,6 +51,10 @@ include('header.php');
                     <div class="gallery-img">
                         <img src="Images/studio.jpg" alt="Black and white photo of a photography studio">
                     </div>
+                    <div class="tags">
+                        <span class="badge badge-beginner">Beginner</span>
+                        <span class="badge badge-course">Course</span>
+                    </div>
                     <div>
                         <h4>Basics of studio photography</h4>
                         <p>Pellentesque accumsan tincidunt ipsum, et consectetur elit egestas vel. Quisque in dapibus mauris, non pellentesque lorem. </p>
@@ -60,6 +64,10 @@ include('header.php');
                 <div class="gallery-item filterItem course advanced">
                     <div class="gallery-img">
                         <img src="Images/underwater.jpg" alt="Woman underwater">
+                    </div>
+                    <div class="tags">
+                        <span class="badge badge-advanced">Advanced</span>
+                        <span class="badge badge-course">Course</span>
                     </div>
                     <div>
                         <h4>Advanced Image Editing</h4>
@@ -71,6 +79,11 @@ include('header.php');
                     <div class="gallery-img">
                         <img src="Images/products.jpg" alt="Photo of Glossier products">
                     </div>
+                    <div class="tags">
+                        <span class="badge badge-beginner">Beginner</span>
+                        <span class="badge badge-intermediate">Intermediate</span>
+                        <span class="badge badge-course">Course</span>
+                    </div>
                     <div>
                         <h4>Basics of Product Photography</h4>
                         <p>Pellentesque accumsan tincidunt ipsum, et consectetur elit egestas vel. Quisque in dapibus mauris, non pellentesque lorem. </p>
@@ -80,6 +93,10 @@ include('header.php');
                 <div class="gallery-item filterItem workshop intermediate">
                     <div class="gallery-img">
                         <img src="Images/butterfly.jpg" alt="Pink butterfly in a pink flower">
+                    </div>
+                    <div class="tags">
+                        <span class="badge badge-intermediate">Intermediate</span>
+                        <span class="badge badge-workshop">Workshop</span>
                     </div>
                     <div>
                         <h4>Macro Photography</h4>
@@ -91,6 +108,10 @@ include('header.php');
                     <div class="gallery-img">
                         <img src="Images/brownies.jpg" alt="Brownies">
                     </div>
+                    <div class="tags">
+                        <span class="badge badge-intermediate">Intermediate</span>
+                        <span class="badge badge-workshop">Workshop</span>
+                    </div>
                     <div>
                         <h4>Food Photography</h4>
                         <p>Pellentesque accumsan tincidunt ipsum, et consectetur elit egestas vel. Quisque in dapibus mauris, non pellentesque lorem. </p>
@@ -100,6 +121,11 @@ include('header.php');
                 <div class="gallery-item filterItem workshop beginner intermediate">
                     <div class="gallery-img">
                         <img src="Images/course.jpg">
+                    </div>
+                    <div class="tags">
+                        <span class="badge badge-beginner">Beginner</span>
+                        <span class="badge badge-intermediate">Intermediate</span>
+                        <span class="badge badge-workshop">Workshop</span>
                     </div>
                     <div>
                         <h4>In the Nature</h4>
@@ -115,7 +141,7 @@ include('header.php');
 <div class="contact">
     <div class="content">
         <h3>Have any questions about the courses or workshops?</h3>
-        <button class="btn btn-outline-dark">Send a message</button>
+        <button class="btn btn-outline-dark" onclick="btnLink('contact.php')">Send a message</button>
     </div>
 </div>
 

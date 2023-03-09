@@ -40,9 +40,8 @@ const remove_is_invalid = (event) => {
 // Change navigation bar background on scroll
 let nav = document.querySelector("#main-nav");
 
-window.addEventListener("scroll", function (event) {
-  event.preventDefault();
-  if (window.scrollY >= 80) {
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 80) {
     nav.style.backgroundColor = "#0F0C29"; // on scroll
   } else {
     nav.style.backgroundColor = "transparent"; // default
@@ -50,14 +49,14 @@ window.addEventListener("scroll", function (event) {
 });
 
 // Filtering courses and workshops by class
-filterSelection("all")
+filterSelection("all");
 function filterSelection(c) {
   let x, i;
   x = document.querySelectorAll(".filterItem");
   if (c == "all") c = "";
   for (i = 0; i < x.length; i++) {
     removeClass(x[i], "show");
-    if(x[i].className.indexOf(c) > -1) addClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) addClass(x[i], "show");
   }
 }
 
@@ -89,7 +88,7 @@ function removeClass(element, name) {
 var btnContainer = document.querySelector("#filter-btns");
 var btns = btnContainer.querySelectorAll(".btn");
 for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
+  btns[i].addEventListener("click", function () {
     let current = document.querySelector(".btn-active");
     if (current) {
       current.classList.remove("btn-active");
@@ -97,26 +96,6 @@ for (var i = 0; i < btns.length; i++) {
     this.classList.add("btn-active");
   });
 }
-
-const myCarouselElement = document.querySelector("#recipeCarousel");
-const carousel = new bootstrap.Carousel(myCarouselElement, {
-  interval: 5000,
-});
-
-let items = document.querySelectorAll(".carousel .carousel-item");
-items.forEach((el) => {
-  const minPerSlide = 3;
-  let next = el.nextElementSibling;
-  for (var i = 1; i < minPerSlide; i++) {
-    if (!next) {
-      // wrap carousel by using first child
-      next = items[0];
-    }
-    let cloneChild = next.cloneNode(true);
-    el.appendChild(cloneChild.children[0]);
-    next = next.nextElementSibling;
-  }
-});
 
 // Redirect to a page when clicking a button
 function btnLink(url) {

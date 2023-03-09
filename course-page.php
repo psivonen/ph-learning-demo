@@ -75,7 +75,7 @@ include('header2.php');
 <div class="contact">
     <div class="content">
         <h3>Have any questions about the courses?</h3>
-        <button class="btn btn-outline-dark">Send a message</button>
+        <button class="btn btn-outline-dark" onclick="btnLink('contact.php')">Send a message</button>
     </div>
 </div>
 

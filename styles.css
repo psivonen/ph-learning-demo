@@ -476,8 +476,7 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  gap: 30px;
+  gap: 40px;
   margin: 0;
 }
 
@@ -489,7 +488,6 @@ hr {
   justify-content: center;
   flex-direction: column;
   align-content: space-between;
-  gap: 50px;
   border-radius: 10px;
 }
 
@@ -527,10 +525,45 @@ hr {
   margin-bottom: 20px;
 }
 
+#filter-btns .btn {
+  margin-bottom: 10px;
+}
+
 .btn.btn-active {
   background-color: #ba97dd;
   color: white;
   border-color: #ba97dd;
+}
+
+.tags {
+  margin: 10px 0;
+}
+
+.badge {
+  padding: 8px 13px;
+  margin-bottom: 5px;
+  font-weight: normal;
+  color: #0f0c29;
+}
+
+.badge-course {
+  background-color: rgb(213, 176, 244);
+}
+
+.badge-workshop {
+  background-color: rgb(176, 224, 244);
+}
+
+.badge-beginner {
+  background-color: rgb(176, 244, 194);
+}
+
+.badge-intermediate {
+  background-color: rgb(255, 242, 188);
+}
+
+.badge-advanced {
+  background-color: rgb(227, 150, 154);
 }
 
 .uppercase {
@@ -541,35 +574,6 @@ hr {
 .fa-chevron-left,
 .fa-chevron-right {
   color: #333;
-}
-
-.testimonials {
-  background-color: #F8F8F8;
-  padding: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.carousel-control-prev {
-  padding-right: 60px;
-}
-
-.carousel-control-next {
-  padding-left: 60px;
-}
-
-.carousel-item {
-  padding: 30px;
-}
-
-.card {
-  padding: 10px;
-  border: none;
-  background-color: transparent;
-  text-align: left;
-  font-size: 14px;
 }
 
 .breadcrumb {
@@ -627,7 +631,7 @@ hr {
 .image-grid-item {
   margin: 5px;
   overflow: hidden;
-  height: 400px;
+  max-height: 300px;
   width: 100%;
   flex: 1 0 calc(25% - 10px);
   animation-duration: 1.5s;
@@ -669,6 +673,7 @@ hr {
   margin: auto;
   padding: 0;
   width: 90%;
+  height: 80%;
   max-width: 1200px;
   animation-duration: 1.5s;
   animation-name: slideIn;
@@ -693,7 +698,7 @@ hr {
 
 .slides {
   display: none;
-  height: 800px;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -739,22 +744,6 @@ img.hover-shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-@media (max-width: 767px) {
-  .carousel-inner .carousel-item > div {
-    display: none;
-  }
-  .carousel-inner .carousel-item > div:first-child {
-    display: block;
-  }
-}
-
-.carousel-inner .carousel-item.active,
-.carousel-inner .carousel-item-next,
-.carousel-inner .carousel-item-prev {
-  display: flex;
-  justify-content: space-evenly;
-}
-
 @media (min-width: 820px) {
   .hero-column {
     padding: 80px 0;
@@ -766,30 +755,6 @@ img.hover-shadow {
 }
 
 @media (min-width: 1000px) {
-  
-  .carousel-control-prev {
-    padding-right: 150px;
-  }
-
-  .carousel-control-next {
-    padding-left: 150px;
-  }
-
-  .carousel-inner .carousel-item-end.active,
-  .carousel-inner .carousel-item-next {
-    transform: translateX(33.33%);
-  }
-
-  .carousel-inner .carousel-item-start.active,
-  .carousel-inner .carousel-item-prev {
-    transform: translateX(-33.33%);
-  }
-
-  .carousel-inner .carousel-item-end,
-  .carousel-inner .carousel-item-start {
-    transform: translateX(0);
-  }
-
   .nav-icon {
     display: none;
   }
@@ -854,17 +819,13 @@ img.hover-shadow {
   .gallery {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: stretch;
+    justify-content: space-between;
+    gap: 40px;
   }
 
   .gallery-item {
     width: 30%;
     box-sizing: border-box;
-  }
-
-  .testimonials {
-    padding: 100px 130px;
   }
 
   .column-img {

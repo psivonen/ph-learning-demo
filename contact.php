@@ -30,8 +30,11 @@ include('header2.php');
             <div class="col-12">
                 <label for="inputSubject" class="form-label">Select subject</label>
                 <select id="inputSubject" class="form-select">
-                    <option selected>Choose...</option>
-                    <option>...</option>
+                    <option selected disabled>Choose...</option>
+                    <option>Courses and/or workshops</option>
+                    <option>Photography services</option>
+                    <option>Pricing</option>
+                    <option>Other</option>
                 </select>
             </div>
             <div class="col-12">

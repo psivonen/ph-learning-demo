@@ -20,7 +20,7 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
 
 <body>
     <div class="navigation" id="main-nav">
-        <div class="logo">Company.</div>
+        <div class="logo">Company</div>
         <a href="javascript:void(0);" class="nav-icon" onclick="navToggle()">
             <i class="fa fa-bars"></i>
         </a>
