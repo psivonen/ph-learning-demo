@@ -1,6 +1,6 @@
 <?php
 
-include('../tunnukset.php');
+include ("/Applications/XAMPP/xamppfiles/htdocs/tunnukset.php");
 
 $server = "localhost";
 $db = "phlearning";

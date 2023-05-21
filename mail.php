@@ -4,6 +4,8 @@ require 'Exception.php';
 require 'PHPMailer.php';
 require 'SMTP.php';
 
+include ("/Applications/XAMPP/xamppfiles/htdocs/tunnukset.php");
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -12,8 +14,8 @@ if (PALVELU == 'mailtrap'){
     /* Mailtrap */
     define("HOST",'smtp.mailtrap.io');
     define("PORT",2525);
-    define("USERNAME",'94efd7bc306da8');
-    define("PASSWORD",'d522a222950135');
+    define("USERNAME", $username_mailtrap);
+    define("PASSWORD",$password_mailtrap);
     //debugger("username:".USERNAME.",password:".PASSWORD);
 }
 
