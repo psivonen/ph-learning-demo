@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include('header.php'); ?>
+<?php 
+$title = 'Home';
+include('header.php'); 
+?>
 
 <div class="container-hero" id="hero">
     <div class="hero-content">

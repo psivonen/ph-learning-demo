@@ -2,6 +2,7 @@
 <html lang="en">
 
 <?php
+$title = "Contact";
 include('header2.php');
 ?>
 

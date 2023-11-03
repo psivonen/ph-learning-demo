@@ -2,6 +2,7 @@
 <html lang="en">
 
 <?php
+$title = 'Basics of Studio Photography';
 include('header2.php');
 ?>
 

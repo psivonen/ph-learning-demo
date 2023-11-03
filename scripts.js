@@ -1,9 +1,18 @@
-const navToggle = () => {
-  var nav = document.querySelector("#topNav");
-  if (nav.className === "nav-links") {
-    nav.className += " responsive";
-  } else nav.className = "nav-links";
-};
+const selectElement = document.querySelector("#courses");
+// If courses select element exists, fill with JSON data
+if (selectElement) {
+  fetch("data.json")
+    .then((response) => response.json())
+    .then((data) => {
+      data.forEach((item) => {
+        const option = document.createElement("option");
+        option.value = item.value;
+        option.text = item.text;
+        selectElement.appendChild(option);
+      });
+    })
+    .catch((error) => console.error("Error loading JSON data: ", error));
+}
 
 const remove_is_invalid = (event) => {
   let element = event.target;
@@ -36,17 +45,6 @@ const remove_is_invalid = (event) => {
     );
   });
 })();
-
-// Change navigation bar background on scroll
-let nav = document.querySelector("#main-nav");
-
-window.addEventListener("scroll", function () {
-  if (window.scrollY > 80) {
-    nav.style.backgroundColor = "#0F0C29"; // on scroll
-  } else {
-    nav.style.backgroundColor = "transparent"; // default
-  }
-});
 
 // Filtering courses and workshops by class
 filterSelection("all");
@@ -136,4 +134,12 @@ function showSlides(n) {
     slides[i].style.display = "none";
   }
   slides[slideIndex - 1].style.display = "block";
+}
+
+function openNav() {
+  document.querySelector("#mySidenav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
 }

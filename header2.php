@@ -21,8 +21,10 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
 <body>
 
     <div class="navigation" id="nav-bar">
-        <div class="logo">Company</div>
-        <a href="javascript:void(0);" class="nav-icon" onclick="navToggle()">
+        <div class="logo">
+            <a href="index.php" class="logo">Company</a>
+        </div>
+        <a href="javascript:void(0);" class="nav-icon" onclick="openNav()">
             <i class="fa fa-bars"></i>
         </a>
         <div class="nav-links" id="topNav">
@@ -32,5 +34,14 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
             <a href="portfolio.php" class="<?= ($activePage == 'portfolio') ? 'active':'nav-link'; ?>">Portfolio</a>
             <a href="" class="<?= ($activePage == 'about') ? 'active':'nav-link'; ?>">About</a>
             <a href="contact.php" class="<?= ($activePage == 'contact') ? 'active':'nav-link'; ?>">Contact</a>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.php" class="<?= ($activePage == 'index') ? 'active':''; ?>">Home</a>
+            <a href="" class="<?= ($activePage == 'photography') ? 'active':''; ?>">Photography</a>
+            <a href="courses.php" class="<?= ($activePage == 'courses') ? 'active':''; ?>">Courses & Workshops</a>
+            <a href="portfolio.php" class="<?= ($activePage == 'portfolio') ? 'active':''; ?>">Portfolio</a>
+            <a href="" class="<?= ($activePage == 'about') ? 'active':''; ?>">About</a>
+            <a href="contact.php" class="<?= ($activePage == 'contact') ? 'active':''; ?>">Contact</a>
         </div>
     </div>

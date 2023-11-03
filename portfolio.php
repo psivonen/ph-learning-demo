@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include('header2.php'); ?>
+<?php
+$title = "Portfolio";
+include('header.php');
+?>
 
 <div class="portfolio">
     <div class="portfolio-content">

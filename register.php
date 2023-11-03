@@ -12,7 +12,9 @@ include('header2.php');
         <form class="row g-3 needs-validation" method="post" novalidate>
             <div class="col-12">
                 <label for="course_id" class="form-label">Select course/workshop</label>
-                <select autofocus required id="course_id" name="course_id" class="form-select <?php is_invalid('course_id'); ?>"><?php courses(); ?></select>
+                <select autofocus required id="courses" name="course_id" class="form-select <?php is_invalid('course_id'); ?>">
+                    <option value="">...</option>
+                </select>
                 <div class="invalid-feedback">Select a course/workshop.</div>
             </div>
             <div class="col-md-6">
