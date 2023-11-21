@@ -3,7 +3,7 @@
 
 <?php
 include('form_validation.php');
-include('header2.php');
+include('header.php');
 ?>
 
 <div class="container-lg">

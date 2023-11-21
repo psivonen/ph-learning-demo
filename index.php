@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php 
+<?php
 $title = 'Home';
-include('header.php'); 
+include('header.php');
 ?>
 
 <div class="container-hero" id="hero">
-    <div class="hero-content">
-        <div class="col">
+    <div class="container-md hero-content">
+        <div class="column">
             <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
             <p class="lead">Nam tempus tellus non nibh dictum facilisis.
                 Nam urna massa, posuere eu mauris sed, condimentum imperdiet turpis.
@@ -20,7 +20,7 @@ include('header.php');
                 <button class="btn btn-outline-light" onclick="btnLink('courses.php')">Start learning</button>
             </div>
         </div>
-        <div class="col">
+        <div class="column col-img">
             <img src="Images/portrait.png" alt="grayscale portrait of a woman">
         </div>
     </div>

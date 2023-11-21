@@ -3,12 +3,12 @@
 
 <?php
 $title = 'Basics of Studio Photography';
-include('header2.php');
+include('header.php');
 ?>
 
-<div class="course-page-hero">
-    <div class="column">
-        <div class="hero-column">
+<div class="course-page-hero" id="hero">
+    <div class="container-md hero-content">
+        <div class="column">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="courses.php">Courses & Workshops</a></li>

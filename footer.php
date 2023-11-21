@@ -1,5 +1,5 @@
-<div class="footer" id="footer">
-    <div class="footer-content">
+<div class="container-lg footer">
+    <div class="container-md footer-content">
         <div class="footer-item">
             <h4>Company</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -27,16 +27,12 @@
             </ul>
         </div>
     </div>
-    <hr>
-    <div class="footer-bottom">
+</div>
+
+<div class="footer-bottom">
         <div class="footer-text">
             <p>&copy; <?php echo date("Y");?>. Company Name. All rights reserved.</p>
         </div>
-        <div class="footer-link">
-            <a href="" class="link-light">Privacy Policy</a> 
-            <a href="" class="link-light">Terms of Service</a>
-        </div>
     </div>
-</div>
 
 </body>

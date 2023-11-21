@@ -3,12 +3,12 @@
 
 <?php
 $title = "Contact";
-include('header2.php');
+include('header.php');
 ?>
 
-<div class="contact-column">
+<div class="container-lg contact-column">
     <div class="item-left">
-        <div class="item-left-content">
+        <div>
             <h2>Get in touch</h2>
             <p> If you have any questions or problems fill a form or send an email.
                 <br>
@@ -20,7 +20,7 @@ include('header2.php');
     </div>
     <div class="item-right">
         <form class="row g-3">
-        <div class="col-12">
+            <div class="col-12">
                 <label for="inputName" class="form-label">Name</label>
                 <input type="text" class="form-control" id="inputName" placeholder="Your name">
             </div>

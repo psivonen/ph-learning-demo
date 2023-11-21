@@ -1,23 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap");
 
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(-50%);
-  }
-  to {
+@keyframes fadeOut {
+  0% {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-@keyframes fadeIn {
-  from {
+  100% {
     opacity: 0;
-  }
-
-  to {
-    opacity: 1;
+    transform: translateY(-50%);
   }
 }
 
@@ -36,9 +26,6 @@ h1 {
   color: #ba97dd;
   font-size: 25px;
   font-weight: 700;
-  animation-duration: 1.5s;
-  animation-name: slideIn;
-  animation-direction: alternate;
 }
 
 h2 {
@@ -116,11 +103,12 @@ p {
   color: white;
   z-index: 10;
   padding: 30px 50px;
-  background: #0f0c29;
+  background: #000;
 }
 
+/* header2.php navbar background color */
 #nav-bar {
-  background-color: #0f0c29;
+  background-color: #000;
 }
 
 .logo {
@@ -208,29 +196,29 @@ p {
 }
 
 .container-hero {
-  background-color: #0f0c29;
+  background-color: #000;
   width: 100%;
-  height: 100%;
-  display: block;
-  overflow: hidden;
-}
-
-.hero-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 150px 70px 0px 70px;
   color: white;
   overflow: hidden;
+}
+
+.hero-content {
+  padding: 150px 50px 0px 50px;
 }
 
 .image {
     width: 100%;
 }
 
+.col {
+  max-width: 50%;
+}
+
 .col img {
-  mix-blend-mode: screen;
   width: 100%;
   object-fit: cover;
   padding-top: 60px;
@@ -253,33 +241,21 @@ p {
 .lead {
   line-height: 25px;
   font-size: 14px;
-  animation-duration: 1.5s;
-  animation-name: slideIn;
-  animation-direction: alternate;
 }
 
 .footer {
-  padding: 50px;
-  background-color: #0f0c29;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: ease 0.5;
-  bottom: 0;
-}
-
-.footer-content {
+  background-color: #000;
+  width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   color: white;
-  gap: 20px;
 }
 
 .footer-item {
   width: 100%;
-  line-height: 25px;
+  line-height: 30px;
 }
 
 .container-md {
@@ -296,7 +272,6 @@ p {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 40px;
 }
 
 .container-register {
@@ -323,7 +298,7 @@ p {
 
 .course-hero {
   background-image: url('Images/camera.jpg');
-  box-shadow: inset 0 0 0 1000px rgba(19, 6, 48, 0.5);
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
   max-width: 100%;
   height: 1000px;
   display: flex;
@@ -342,7 +317,7 @@ p {
 }
 
 .portfolio {
-  background-color: #0f0c29;
+  background: #000;
   max-width: 100%;
   height: 850px;
   display: flex;
@@ -354,15 +329,21 @@ p {
 .portfolio-content {
   text-align: center;
   color: white;
-  width: 50%;
+  padding: 50px;
+}
+
+.portfolio-container {
+  max-width: 100%;
+  background: black;
+  margin-top: 80px;
+  padding: 8px;
 }
 
 .course-page-hero {
-  margin-top: 84px;
-  background-color: #F8F8F8;
+  background: #F8F8F8;
   width: 100%;
-  padding: 40px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -379,7 +360,7 @@ p {
 }
 
 .hero-column {
-  width: 100%;
+  padding: 150px 50px 0px 50px;
 }
 
 .column-img {
@@ -408,6 +389,14 @@ p {
   text-align: center;
   color: white;
   padding-top: 20px;
+  width: 100%;
+  background: #000;
+}
+
+.footer-bottom p {
+  margin: 0;
+  padding: 30px;
+  font-size: 13px;
 }
 
 .link-light {
@@ -431,6 +420,7 @@ hr {
 .newsletter {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   gap: 15px;
 }
 
@@ -613,14 +603,13 @@ hr {
 }
 
 .image-container {
-  background-color: #0f0c29;
+  background-color: #000;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .image-grid {
-  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -629,12 +618,8 @@ hr {
 .image-grid-item {
   margin: 5px;
   overflow: hidden;
-  max-height: 300px;
-  width: 100%;
+  max-height: 500px;
   flex: 1 0 calc(25% - 10px);
-  animation-duration: 1.5s;
-  animation-name: slideIn;
-  animation-direction: alternate;
 }
 
 .image-grid-item img {
@@ -650,6 +635,7 @@ hr {
 .image-grid-item:hover img {
   transform: scale(1.1);
   opacity: 1;
+  cursor: pointer;
 }
 
 .modal {
@@ -673,9 +659,12 @@ hr {
   width: 90%;
   height: 80%;
   max-width: 1200px;
-  animation-duration: 1.5s;
-  animation-name: slideIn;
-  animation-direction: alternate;
+  animation: slideIn 0.5s ease forwards;
+}
+
+/* Apply the animation when closing */
+.modal.closing .modal-content {
+  animation: fadeOut 0.5s ease forwards;
 }
 
 .close {
@@ -704,9 +693,6 @@ hr {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  animation-duration: 1.5s;
-  animation-name: fadeIn;
-  animation-direction: alternate;
 }
 
 .prev-img,
@@ -749,7 +735,7 @@ img.hover-shadow {
   z-index: 1;
   top: 0;
   left: 0;
-  background: #0f0c29;
+  background: #000;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -793,11 +779,19 @@ img.hover-shadow {
   }
 
   .course-page-hero {
-    padding: 0;
+    margin-top: 100px;
   }
 
   h1 {
     font-size: 20px;
+  }
+
+  .newsletter {
+    flex-direction: row;
+  }
+
+  .portfolio-content {
+    max-width: 1000px;
   }
 
 }
@@ -817,9 +811,7 @@ img.hover-shadow {
   }
 
   .hero-content {
-    flex-direction: row;
-    padding: 0px 100px 0px 150px;
-    gap: 50px;
+    align-items: center;
   }
 
   .container-md {
@@ -828,7 +820,6 @@ img.hover-shadow {
   }
 
   .container-lg {
-    gap: 80px;
     padding: 100px 40px;
     justify-content: flex-start;
   }
@@ -842,26 +833,7 @@ img.hover-shadow {
   }
 
   .footer {
-    padding: 100px;
-  }
-
-  .footer-content {
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 150px;
-  }
-
-  .footer-item {
-    width: 50%;
-  }
-
-  .footer-text {
-    float: left;
-  }
-
-  .footer-link {
-    float: right;
+    max-width: 100%;
   }
 
   .gallery {
@@ -877,8 +849,9 @@ img.hover-shadow {
   }
 
   .column-img {
-    height: 400px;
+    height: 500px;
     width: 100%;
+    padding-bottom: 40px;
   }
 
   .course-page-hero {
@@ -891,13 +864,11 @@ img.hover-shadow {
 
   .item-left,
   .item-right {
-    padding: 100px 140px;
-    height: 50%;
-    width: 50%;
+    padding: 100px 100px;
   }
 
   h1 {
-    font-size: 30px;
+    font-size: 40px;
   }
 
   .image-grid {
@@ -923,12 +894,11 @@ img.hover-shadow {
 }
 
 @media (min-width: 1500px) {
-  .footer {
-    padding: 100px 180px;
+  .col-img {
+    width: 80%;
   }
 
-  .hero-column {
-    width: 70%;
-    margin: auto;
+  .hero-content {
+    padding: 50px 50px 0px 50px;
   }
 }
