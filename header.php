@@ -29,7 +29,7 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
             <i class="fa fa-bars"></i>
         </a>
         <div class="nav-links" id="topNav">
-            <a href="index.html" class="<?= ($activePage == 'index') ? 'active':'nav-link'; ?>">Home</a>
+            <a href="index.php" class="<?= ($activePage == 'index') ? 'active':'nav-link'; ?>">Home</a>
             <a href="" class="<?= ($activePage == 'services') ? 'active':'nav-link'; ?>">Services</a>
             <a href="courses.php" class="<?= ($activePage == 'courses') ? 'active':'nav-link'; ?>">Courses & Workshops</a>
             <a href="portfolio.php" class="<?= ($activePage == 'portfolio') ? 'active':'nav-link'; ?>">Portfolio</a>
@@ -38,7 +38,7 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
         </div>
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="index.html" class="<?= ($activePage == 'index') ? 'active':''; ?>">Home</a>
+            <a href="index.php" class="<?= ($activePage == 'index') ? 'active':''; ?>">Home</a>
             <a href="" class="<?= ($activePage == 'services') ? 'active':''; ?>">Services</a>
             <a href="courses.php" class="<?= ($activePage == 'courses') ? 'active':''; ?>">Courses & Workshops</a>
             <a href="portfolio.php" class="<?= ($activePage == 'portfolio') ? 'active':''; ?>">Portfolio</a>
