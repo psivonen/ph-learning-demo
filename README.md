@@ -1,5 +1,5 @@
-# Web development practise project
+# Website template for photographer
 
-Mockup web page created for a photographer, for selling their products, focusing on selling different photography courses.
+For full details of the project chek out: https://github.com/psivonen/ph-learning
 
-Demo page: https://psivonen.github.io/ph-learning-demo/
+<b>Demo:</b> https://psivonen.github.io/ph-learning-demo/
